@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>☀️ Weather App</title>
+  <link rel="stylesheet" href="src/styles.css" />
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Simonetta:ital,wght@0,400;0,900;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!--axios-->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!--font awesome-->
+  <script src="https://kit.fontawesome.com/c53de804cc.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="main">
+  <div class="weather-background">
+    <form>
+      <div class="heading">
+        <input type="text" placeholder="Search for a city" class="search-bar" id="search-city" autocomplete="off" />
+        <button class="search-button" id="search">Search</button>
+        <button class="current-location"><i class="fa-solid fa-location-dot"></i></button>
+      </div>
+    </form>
+    
+    <div class="middle-section">
+
+      <div class="container" id="weather-container-left">
+        <div class="city" id="current-city">
+          New York
+        </div>
+        <div class="date" id="display-date">
+          <strong><span id="current-month">
+              June
+            </span></strong>
+          <strong><span id="current-date">
+              03,
+            </span></strong>
+          <span id="current-year">
+            2022
+          </span>
+        </div>
+        <div class="day-time" id="day-time">
+          <strong><span class="displayed-day" id="current-day">
+              Thursday,
+            </span></strong>
+          <span class="time" id="current-time">
+            2:15
+          </span>
+          <span class="am-pm" id="current-am-pm">
+            AM
+          </span>
+        </div>
+      </div>
+
+      <div class="container" id="weather-container-middle">
+        <div class="weather-icon">
+          <img src="" alt="" id="icon-element">
+        </div>
+        <div class="weather-description">
+          Sunny
+        </div>
+        <div class="temperature">
+          <div class="temp">
+            <div class="temp-number">
+              <strong><span class="current-temperature" id="display-temperature">25</span></strong>
+            </div>
+          </div>
+          <div class="temp">
+            <div class="temp-unit">
+              &#xb0;<a href="" class="active" id="celsius-link">C</a>|&#xb0;<a href="" 
+                id="fahrenheit-link">F</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" id="weather-container-right">
+        <div class="precipitation">Precipitation: 0%</div>
+        <div class="humidity">Humidity: 68%</div>
+        <div class="wind">Wind: 5 mph</div>
+      </div>
+
+    </div>
+  </div>
+  <div class="footer">
+    <p>
+      <a href="https://github.com/chaitalinandkar/Weather-App" class="open-source-code">Open-source code</a> by Chaitali
+      Nandkar
+    </p>
+  </div>
+  <script src="src/index.js"></script>
+</body>
+
+</html>
