@@ -183,10 +183,12 @@ div.date {
 }
 
 .open-source-code {
-  
   margin-left: 30px;
   text-decoration: none;
+}
 
+.netlify-link{
+  text-decoration: none;
 }
 .footer{
   display: block;
