@@ -26,9 +26,9 @@ let year = now.getFullYear();
 
 //Display DATE format
 let displayMonth = document.querySelector("#current-month");
-displayMonth.innerHTML = `${month} `;
+displayMonth.innerHTML = `${month}`;
 let displayDate = document.querySelector("#current-date");
-displayDate.innerHTML = `${date}, `;
+displayDate.innerHTML = `${date},`;
 let displayYear = document.querySelector("#current-year");
 displayYear.innerHTML = `${year}`;
 
@@ -56,9 +56,9 @@ else suffix = "AM";
 
 //Display DAY & TIME
 let currentDay = document.querySelector("#current-day");
-currentDay.innerHTML = `${day}, `;
+currentDay.innerHTML = `${day},`;
 let currentDate = document.querySelector("#current-time");
-currentDate.innerHTML = `${hour}:${minutes} `;
+currentDate.innerHTML = `${hour}:${minutes}`;
 let ampmSuffix = document.querySelector("#current-am-pm");
 ampmSuffix.innerHTML = `${suffix}`;
 

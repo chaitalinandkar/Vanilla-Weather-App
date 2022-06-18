@@ -15,9 +15,6 @@
 
 .weather-background {
   position: relative;
-  z-index: 1;
-  flex-direction: row;
-  /* background-image: url("../images/background.jpg"); */
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   background-position: cover;
   background-size: cover;
@@ -101,6 +98,7 @@ div.heading {
 
 #weather-container-left {
   margin-left: 30px;
+  flex: 1.2;
 }
 
 .city {
@@ -124,6 +122,7 @@ div.date {
 
 #weather-container-middle {
   margin-left: 70px;
+  flex: 1;
 }
 
 .weather-icon {
@@ -174,6 +173,7 @@ div.date {
 
 #weather-container-right {
   text-align: center;
+  flex: 1;
   float: right;
   font-weight: 500;
   line-height: 40px;
