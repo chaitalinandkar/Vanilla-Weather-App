@@ -66,6 +66,39 @@ ampmSuffix.innerHTML = `${suffix}`;
 let city = document.querySelector("#current-city");
 city.innerHTML = navigator.geolocation.getCurrentPosition(showCurrentPosition);
 
+//Show forecast for next 5 days
+function showForecast(response) {
+  console.log(response.data);
+  let forcastElement = document.querySelector("#forecast");
+  
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  let forecastHTML = "";
+  forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML = forecastHTML + 
+    `
+    <div class="col">
+      <p class="day">${day}</p>
+      <p class="temperature-5Days">
+        <strong>20</strong>&#xb0;C|<strong>68</strong>&#xb0;F
+      </p>
+      <p class="icon">⛅</p>
+      <p class="details">Partly Sunny</p>
+    </div>
+    `;
+  });
+  
+  forecastHTML = forecastHTML + `</div>`;
+  forcastElement.innerHTML = forecastHTML;
+
+}
+
+//Get forecast
+function getForecast(coordinates) {
+  let apiKey = "f7dffd4359849bb28c77fa4fe304c30f";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+  axios.get(apiURL).then(showForecast);
+}
 //Searched City using API
 function displaySearchedCityDate(response) {
   console.log(response);
@@ -91,7 +124,7 @@ function displaySearchedCityDate(response) {
  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-  
+  getForecast(response.data.coord);
 }
 
 //current button using Geolocation
