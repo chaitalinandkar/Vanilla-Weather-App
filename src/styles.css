@@ -12,22 +12,25 @@
   background-repeat: no-repeat;
   position: relative;
   font-family: 'IBM Plex Mono', monospace;
+  color: white;
 }
 
 .weather-background {
   position: relative;
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  /* background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
+  background-color: #000000a8;
   background-position: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 950px;
+  width: 1000px;
   height: 100%;
   display: block;
-  margin: 170px auto;
+  margin: 100px auto;
   border-radius: 10px;
   opacity: 1;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
   margin-bottom: 0;
+  color: white;
 }
 
 div.heading {
@@ -44,8 +47,7 @@ div.heading {
   padding: 10px;
   padding-left: 20px;
   font-size: 20px;
-  margin-top: 30px;
-  margin-right: 20px;
+  margin: 30px 20px 0 0;
   border-radius: 10px;
   text-align: left;
   border: none;
@@ -107,13 +109,17 @@ div.heading {
   font-size: 35px;
   font-weight: 700;
   border: none;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.481);
   border-radius: 10px;
   margin-bottom: 25px;
   background: radial-gradient(circle at 10% 20%, rgb(248, 219, 219) 0%, rgb(229, 248, 250) 90%);
   transition: all 0.15s ease-in-out;
+  color: #606060;
 }
-
+.city:hover{
+  color: #000000;
+  box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.883);
+}
 div.day-time,
 div.date {
   font-size: 25px;
@@ -162,7 +168,7 @@ div.date {
   text-decoration: none;
 }
 .active{
-  color: #686868;
+  color: #dad8d8;
 }
 
 .active:hover{
@@ -173,7 +179,7 @@ div.date {
 }
 
 #weather-container-right {
-  text-align: center;
+  text-align: left;
   flex: 1;
   float: right;
   font-weight: 500;
@@ -189,12 +195,14 @@ div.date {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin: 0 20px 30px 20px;
+  color: black;
 }
 
 .col {
   border: 0.5px solid gray;
   border-radius: 10px;
-  background: linear-gradient(to top, #bec5d1 0%, #e7e9ec 100%);
+  background: linear-gradient(to top, #d1bec9 0%, #e7e9ec 100%);
   border: none;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   transition: all 0.15s ease-in-out;
@@ -204,7 +212,7 @@ div.date {
 }
 
 .col:hover {
-  background: linear-gradient(to top, #a8a5a5 0%, #e1e4e4 100%);
+  background: linear-gradient(to top, #b0b0b0 0%, #eed5d5 100%);
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
 }
 .day {
@@ -238,8 +246,9 @@ div.date {
   text-align: center;
   margin: 0 auto;
   background-color: rgba(240, 248, 255, 0.559);
-  width: 950px;
+  width: 1000px;
   height: 50px;
   padding-top: 10px;
   border-radius: 10px;
+  margin-bottom: 100px;
 }
