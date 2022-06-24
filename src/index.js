@@ -44,15 +44,19 @@ let days = [
 ];
 let day = days[now.getDay()];
 
+
+
 //Getting current TIME
 let hour = now.getHours();
+let min = now.getMinutes();
+let suffix;
+if (hour >= 12 && min > 0) suffix = "PM";
+else suffix = "AM";
+
 if (hour > 12)
   hour = hour - 12;
-let minutes = (now.getMinutes()<10?'0':'') + now.getMinutes();
+let minutes = (min <10?'0':'') + now.getMinutes();
 
-let suffix;
-if (hour >= 12 && minutes > 0) suffix = "PM";
-else suffix = "AM";
 
 //Display DAY & TIME
 let currentDay = document.querySelector("#current-day");
